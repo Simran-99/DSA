@@ -179,3 +179,60 @@ Explanation: The only possible set you can choose is {7}. This will make the new
 
 Solution Link: https://leetcode.com/problems/reduce-array-size-to-the-half/description/
 
+## Rotate image
+
+You are given an n x n 2D matrix representing an image, rotate the image by 90 degrees (clockwise).
+
+You have to rotate the image in-place, which means you have to modify the input 2D matrix directly. DO NOT allocate another 2D matrix and do the rotation.
+
+ 
+
+Example 1:
+
+
+Input: matrix = [[1,2,3],[4,5,6],[7,8,9]]
+Output: [[7,4,1],[8,5,2],[9,6,3]]
+Example 2:
+
+
+Input: matrix = [[5,1,9,11],[2,4,8,10],[13,3,6,7],[15,14,12,16]]
+Output: [[15,13,2,5],[14,3,4,1],[12,6,8,9],[16,7,10,11]]
+
+### Approach to Solve:
+
+1.Initialization:
+
+The left pointer is initialized to 0, representing the starting column.
+The right pointer is initialized to len(matrix) - 1, representing the ending column.
+
+2.Outer While Loop:
+
+The loop continues until left is less than right.
+
+3.Inner For Loop:
+
+Iterates over the range from 0 to right - left (inclusive), effectively iterating over the layers of the matrix.
+
+4.Element Swapping:
+
+Four elements are rotated in each iteration:
+The top row element (matrix[top][left + i]) is moved to the rightmost column.
+The leftmost column element (matrix[bottom - i][left]) is moved to the top row.
+The bottom row element (matrix[bottom][right - i]) is moved to the leftmost column.
+The rightmost column element (matrix[top + i][right]) is moved to the bottom row.
+This swapping effectively rotates the elements 90 degrees clockwise.
+
+5.Updating Pointers:
+
+After completing the swaps for the current layer, the left pointer is incremented, and the right pointer is decremented to move inward to the next layer.
+
+6.Return:
+
+The function does not explicitly return anything (None), but it modifies the input matrix in place.
+
+Solution Link: https://leetcode.com/problems/rotate-image/
+
+![image](https://github.com/Simran-99/DSA/assets/68385902/e8ae736f-1009-45eb-88cb-5f7bbfcad0c2)
+
+
+
