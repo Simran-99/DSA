@@ -358,6 +358,41 @@ Solution Link:https://leetcode.com/problems/fruit-into-baskets/
 
 ![image](https://github.com/user-attachments/assets/eb57d47c-f1ef-432e-9b00-d996b65599a4)
 
+## Consecutive Ones III
+
+Given a binary array nums and an integer k, return the maximum number of consecutive 1's in the array if you can flip at most k 0's.
+
+ 
+
+Example 1:
+
+Input: nums = [1,1,1,0,0,0,1,1,1,1,0], k = 2
+Output: 6
+Explanation: [1,1,1,0,0,1,1,1,1,1,1]
+Bolded numbers were flipped from 0 to 1. The longest subarray is underlined.
+Example 2:
+
+Input: nums = [0,0,1,1,0,0,1,1,1,0,1,1,0,0,0,1,1,1,1], k = 3
+Output: 10
+Explanation: [0,0,1,1,1,1,1,1,1,1,1,1,0,0,0,1,1,1,1]
+Bolded numbers were flipped from 0 to 1. The longest subarray is underlined.
+
+### Approach:
+
+1. Set max_zeros as 0, l (left pointer) as 0 and max_w  as 0
+2. Iterate through the entire list
+3. Inside the loop if the value at index r (right pointer) is 0 then increment max_zeros
+4. Add a while loop with the condition that the max_zeros is greater than k
+5. If at left pointer l , the value is 0. Decrement the max_zeros and the loop will break
+6. w=r-l+1
+7. find maximum of w and max_w
+8. return the max_w
+
+Solution Link: https://leetcode.com/problems/max-consecutive-ones-iii/description/
+
+![image](https://github.com/user-attachments/assets/b130269d-57e5-4ead-b017-d7fb7eb01377)
+
+
 
 
 
