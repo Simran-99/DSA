@@ -276,6 +276,34 @@ Solution Link: https://leetcode.com/problems/plus-one/description/
 
 ![image](https://github.com/Simran-99/DSA/assets/68385902/099bf754-cce1-4e86-87fe-692ccd8099d4)
 
+## Intersection of Two Arrays
+
+Given two integer arrays nums1 and nums2, return an array of their 
+intersection
+. Each element in the result must be unique and you may return the result in any order.
+
+ 
+
+Example 1:
+
+Input: nums1 = [1,2,2,1], nums2 = [2,2]
+Output: [2]
+Example 2:
+
+Input: nums1 = [4,9,5], nums2 = [9,4,9,8,4]
+Output: [9,4]
+Explanation: [4,9] is also accepted.
+
+### Approach:
+
+1. Interate through nums1 and add the numbers in the lst inside a hashmap
+2. Iterate through nums2 and add the numbers in the lst inside another hashmap
+3. Interate through the keys of hashmap1
+4. Add a conditional statement inside the loop. If the key exists in hashmap2 . It would be added to the result list
+5. return the result
+
+Solution Link: https://leetcode.com/problems/intersection-of-two-arrays/description/
+
 
 
 
