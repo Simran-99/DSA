@@ -392,6 +392,37 @@ Solution Link: https://leetcode.com/problems/max-consecutive-ones-iii/descriptio
 
 ![image](https://github.com/user-attachments/assets/b130269d-57e5-4ead-b017-d7fb7eb01377)
 
+## Container with Most Water
+
+You are given an integer array height of length n. There are n vertical lines drawn such that the two endpoints of the ith line are (i, 0) and (i, height[i]).
+
+Find two lines that together with the x-axis form a container, such that the container contains the most water.
+
+Return the maximum amount of water a container can store.
+
+Notice that you may not slant the container.
+
+ 
+
+Example 1:
+
+
+Input: height = [1,8,6,2,5,4,8,3,7]
+Output: 49
+Explanation: The above vertical lines are represented by array [1,8,6,2,5,4,8,3,7]. In this case, the max area of water (blue section) the container can contain is 49.
+Example 2:
+
+Input: height = [1,1]
+Output: 1
+
+### Approach:
+
+1. Assign the left pointer as 0, max_area =0, l (left pointer) as 0, r (right pointer) as len(nums)
+2. while l<r
+3. area=min(height[l],height[r])*(r-l)
+4. max_area=max(area,max_area)
+5. if height[l]<height[r] : left=left +1, else right = right -1
+6. return max_area
 
 
 
